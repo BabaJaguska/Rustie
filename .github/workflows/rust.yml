@@ -20,20 +20,22 @@ jobs:
         toolchain: stable
         override: true
 
-    - name: Change working directory
-      run: cd bioinfo_tool
-
     - name: Build Project
       run: cargo build
+      working-directory: ./bioinfo_tool
 
     - name: Run Tests
       run: cargo test
+      working-directory: ./bioinfo_tool
 
     - name: Generate Documentation
       run: cargo doc
+      working-directory: ./bioinfo_tool
 
     - name: Run Clippy (Linting)
       run: cargo clippy -- -D warnings
+      working-directory: ./bioinfo_tool
 
     - name: Check Formatting
       run: cargo fmt -- --check
+      working-directory: ./bioinfo_tool
