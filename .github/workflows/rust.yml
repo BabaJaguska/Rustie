@@ -1,0 +1,36 @@
+name: Rust Project CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        override: true
+
+    - name: Build Project
+      run: cargo build
+
+    - name: Run Tests
+      run: cargo test
+
+    - name: Generate Documentation
+      run: cargo doc
+
+    - name: Run Clippy (Linting)
+      run: cargo clippy -- -D warnings
+
+    - name: Check Formatting
+      run: cargo fmt -- --check
