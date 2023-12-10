@@ -42,7 +42,6 @@ mod tests {
 
     mod complementing {
         use bioinfo_tool;
-        use std::collections::HashMap;
         struct TestCase {
             dna: &'static str,
             complement: &'static str,
