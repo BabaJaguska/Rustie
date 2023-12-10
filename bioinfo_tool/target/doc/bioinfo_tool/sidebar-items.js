@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["count_nucleotides","dna_complement"]};
