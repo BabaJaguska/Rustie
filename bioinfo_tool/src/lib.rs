@@ -8,7 +8,6 @@ pub fn count_nucleotides(dna: &str) -> HashMap<char, usize> {
     counts
 }
 
-
 pub fn dna_complement(dna: &str) -> String {
     dna.chars()
         .map(|nucleotide| {
@@ -26,7 +25,7 @@ pub fn dna_complement(dna: &str) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
-    mod counting{
+    mod counting {
         use super::*;
 
         struct TestCase {
@@ -65,7 +64,7 @@ mod tests {
         }
     }
 
-    mod complementing{
+    mod complementing {
         use super::*;
         struct TestCase {
             dna: &'static str,
@@ -77,14 +76,14 @@ mod tests {
             let test_cases = vec![
                 TestCase {
                     dna: "",
-                    complement: ""
+                    complement: "",
                 },
                 TestCase {
                     dna: "AACTGGA",
-                    complement: "TTGACCT"
-                }
+                    complement: "TTGACCT",
+                },
             ];
-            for test in test_cases{
+            for test in test_cases {
                 let complement = dna_complement(test.dna);
                 assert_eq!(complement, test.complement);
             }

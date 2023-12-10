@@ -5,7 +5,6 @@ fn main() {
     let complement = bioinfo_tool::dna_complement(dna);
     println!(
         "DNA: {}\nComplement: {}\nCounts: {:#?} ",
-        dna,  complement, counts
+        dna, complement, counts
     );
-
 }
