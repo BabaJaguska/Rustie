@@ -7,7 +7,7 @@ build:
 test:
 	cargo test
 run:
-	cargo run
+	cargo run --bin bioinfo_tool
 doc:
 	cargo doc
 clean:

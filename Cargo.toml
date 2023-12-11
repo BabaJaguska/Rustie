@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "bioinfo_tool",
+    "bioinfo_cli"
+]
+resolver = "2"
