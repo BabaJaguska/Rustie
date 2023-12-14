@@ -1,6 +1,7 @@
 [workspace]
 members = [
     "bioinfo_tool",
-    "bioinfo_cli"
+    "bioinfo_cli",
+    "bioinfo_qa",
 ]
 resolver = "2"

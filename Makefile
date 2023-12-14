@@ -10,6 +10,8 @@ run:
 	cargo run --bin bioinfo_tool
 doc:
 	cargo doc
+build-release:
+	cargo build --release
 clean:
 	cargo clean
 all: format lint build test run doc clean
