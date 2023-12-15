@@ -112,6 +112,8 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "rust-bert",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
