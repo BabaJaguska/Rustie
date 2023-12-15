@@ -8,6 +8,7 @@ fn main(){
         Ok(json_data) =>{
             // Print a random entry
             println!("{:#?}", json_data.iter().next());
+            println!("Total number of entries: {}", json_data.len())
         }
         Err(e) => {
             println!("Sorry bro, {}", e);
